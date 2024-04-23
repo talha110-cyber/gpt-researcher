@@ -1,7 +1,6 @@
 import aiofiles
 import urllib
 import uuid
-from md2pdf.core import md2pdf
 import mistune
 from docx import Document
 from htmldocx import HtmlToDocx
@@ -13,6 +12,8 @@ async def write_to_file(filename: str, text: str) -> None:
         filename (str): The filename to write to.
         text (str): The text to write.
     """
+    if text is None:
+        text = ''
     # Convert text to UTF-8, replacing any problematic characters
     text_utf8 = text.encode('utf-8', errors='replace').decode('utf-8')
 

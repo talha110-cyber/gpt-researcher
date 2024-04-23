@@ -6,4 +6,5 @@ __all__ = [
     "GoogleProvider",
     "OpenAIProvider",
     "AzureOpenAIProvider"
+    "NewProvider"  
 ]
